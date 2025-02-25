@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { useSidebar } from "../context/SidebarContext";
 import {
   BoxCubeIcon,
-  CalenderIcon,
+  // CalenderIcon,
   ChevronDownIcon,
   GridIcon,
   HorizontaLDots,
@@ -17,7 +17,7 @@ import {
   TableIcon,
   UserCircleIcon,
 } from "../icons/index";
-import SidebarWidget from "./SidebarWidget";
+// import SidebarWidget from "./SidebarWidget";
 
 type NavItem = {
   name: string;
