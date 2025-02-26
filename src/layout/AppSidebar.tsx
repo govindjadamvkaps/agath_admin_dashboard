@@ -4,13 +4,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useSidebar } from "../context/SidebarContext";
+import { IoMdNotificationsOutline } from "react-icons/io";
+import { VscFeedback } from "react-icons/vsc";
+import { MdSubject } from "react-icons/md";
 import {
   BoxCubeIcon,
   // CalenderIcon,
   ChevronDownIcon,
   GridIcon,
   HorizontaLDots,
-  ListIcon,
   PageIcon,
   PieChartIcon,
   PlugInIcon,
@@ -18,6 +20,9 @@ import {
   UserCircleIcon,
 } from "../icons/index";
 // import SidebarWidget from "./SidebarWidget";
+// import logo from "@/../public/images/logo/SMARTPLATFORM_LOGO.png";
+
+
 
 type NavItem = {
   name: string;
@@ -36,35 +41,74 @@ const navItems: NavItem[] = [
   {
     icon: <TableIcon />,
     name: "Curriculum Management",
-    subItems: [
-      { name: "Upload New Curriculum", path: "/upload-curriculum", pro: false },
-      { name: "View/Edit Existing Curriculum", path: "/view-curriculum", pro: false }
-    ],
+    path: "/curriculum-management",
   },
-  {
+{
     icon: <PageIcon />,
     name: "Lesson Plan Management",
-    subItems: [
-      { name: "View Generated Plans", path: "/view-plans", pro: false },
-      { name: "Approve/Reject Plans", path: "/approve-reject-plans", pro: false }
-    ],
+    path: "/lesson-plan-management",
+  },
+  {
+    icon: <MdSubject size={24}/>,
+    name: "Subject Management",
+    path: "/subject-management",
+  },
+  {
+    icon: <UserCircleIcon />,
+    name: "Grade Management",
+    path: "/grade-management",
+  },
+  {
+    icon: <IoMdNotificationsOutline size={24}/>,
+    name: "Notifications",
+    path: "/notifications",
+  },
+  {
+    icon: <VscFeedback size={24}/>,
+    name: "Feedback",
+    path: "/feedback",
   },
    {
     icon: <UserCircleIcon />,
     name: "User Management",
-    subItems: [
-      { name: "Add/Remove Users", path: "/add-remove-users", pro: false },
-      { name: "Assign Roles (Educators, Tech Admins)", path: "/assign-roles", pro: false }
-    ],
+    path: "/user-management",
   },
-  {
-    icon: <ListIcon />,
-    name: "Basic Reports",
-    subItems: [
-      { name: "Usage Statistics", path: "/usage-statistics", pro: false },
-      { name: "Export Simple Reports", path: "/export-simple-reports", pro: false }
-    ],
-  },
+
+
+  // {
+  //   icon: <TableIcon />,
+  //   name: "Curriculum Management",
+  //   subItems: [
+  //     { name: "Upload New Curriculum", path: "/upload-curriculum", pro: false },
+  //     { name: "View/Edit Existing Curriculum", path: "/view-curriculum", pro: false }
+  //   ],
+  // },
+  // {
+  //   icon: <PageIcon />,
+  //   name: "Lesson Plan Management",
+  //   subItems: [
+  //     { name: "View Generated Plans", path: "/view-plans", pro: false },
+  //     { name: "Approve/Reject Plans", path: "/approve-reject-plans", pro: false }
+  //   ],
+  // },
+  //  {
+  //   icon: <UserCircleIcon />,
+  //   name: "User Management",
+  //   subItems: [
+  //     { name: "Add/Remove Users", path: "/add-remove-users", pro: false },
+  //     { name: "Assign Roles (Educators, Tech Admins)", path: "/assign-roles", pro: false }
+  //   ],
+  // },
+  // {
+  //   icon: <ListIcon />,
+  //   name: "Basic Reports",
+  //   subItems: [
+  //     { name: "Usage Statistics", path: "/usage-statistics", pro: false },
+  //     { name: "Export Simple Reports", path: "/export-simple-reports", pro: false }
+  //   ],
+  // },
+
+
   // {
   //   icon: <UserCircleIcon />,
   //   name: "User Profile",

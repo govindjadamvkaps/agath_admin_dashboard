@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/context/ThemeContext";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import logo from "@/../public/images/logo/SMARTPLATFORM_LOGO.png";
 
 export default function AuthLayout({
   children,
@@ -25,13 +26,13 @@ export default function AuthLayout({
                   <Image
                     width={231}
                     height={48}
-                    src="./images/logo/auth-logo.svg"
+                    src={logo}
                     alt="Logo"
                   />
                 </Link>
-                <p className="text-center text-gray-400 dark:text-white/60">
+                {/* <p className="text-center text-gray-400 dark:text-white/60">
                   Free and Open-Source Tailwind CSS Admin Dashboard Template
-                </p>
+                </p> */}
               </div>
             </div>
           </div>
