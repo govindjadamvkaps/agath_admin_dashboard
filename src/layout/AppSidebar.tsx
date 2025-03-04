@@ -20,7 +20,7 @@ import {
   UserCircleIcon,
 } from "../icons/index";
 // import SidebarWidget from "./SidebarWidget";
-// import logo from "@/../public/images/logo/SMARTPLATFORM_LOGO.png";
+import logo from "@/../public/images/logo/SMARTPLATFORM_LOGO.png";
 
 
 
@@ -380,8 +380,9 @@ const AppSidebar: React.FC = () => {
       onMouseEnter={() => !isExpanded && setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
+      <div className="flex items-center gap-3">
       <div
-        className={`py-8 flex  ${
+        className={`py-1 flex  ${
           !isExpanded && !isHovered ? "lg:justify-center" : "justify-start"
         }`}
       >
@@ -390,28 +391,30 @@ const AppSidebar: React.FC = () => {
             <>
               <Image
                 className="dark:hidden"
-                src="/images/logo/logo.svg"
+                src={logo}
                 alt="Logo"
-                width={150}
+                width={100}
                 height={40}
               />
               <Image
                 className="hidden dark:block"
-                src="/images/logo/logo-dark.svg"
+                src={logo}
                 alt="Logo"
-                width={150}
+                width={100}
                 height={40}
               />
             </>
           ) : (
             <Image
-              src="/images/logo/logo-icon.svg"
+              src={logo}
               alt="Logo"
               width={32}
               height={32}
             />
           )}
         </Link>
+      </div>
+      {/* <div><p className="text-[20px]">Agatha</p></div> */}
       </div>
       <div className="flex flex-col overflow-y-auto duration-300 ease-linear no-scrollbar">
         <nav className="mb-6">

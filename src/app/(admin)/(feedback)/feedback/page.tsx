@@ -12,7 +12,7 @@ export default function Feedback() {
     <div>
       <PageBreadcrumb pageTitle="Feedback" />
         {feedbackData.map((feedback) => (
-          <div key={feedback.id} className="flex justify-between items-center border-b pb-2">
+          <div key={feedback.id} className="flex justify-between items-center border-b pb-2 dark:text-white/90">
             <div>
               <h4 className="font-semibold">{feedback.user}</h4>
               <p className="text-sm">{feedback.message}</p>
